@@ -8,7 +8,7 @@ def rem_last_element(list):
 
 def delete(list):
     list = [3, 5, 2, 9, 8]
-    removed = list.pop()
+    list.pop()
     return list
 
 
