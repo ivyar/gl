@@ -5,6 +5,11 @@ def rem_last_element(list):
     list.remove(list[-1])
     return list
 
+def delete(list):
+    list=[3, 5, 2, 9, 8]
+    removed=list.pop()
+    return list
+
 
 class TestListMethods(unittest.TestCase):
 
