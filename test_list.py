@@ -1,6 +1,11 @@
 import unittest
 
 
+def swap_first_last_elements(list):
+    list[0], list[-1] = list[-1], list[0]
+    return list
+
+
 def rem_last_element(list):
     list.remove(list[-1])
     return list
@@ -13,6 +18,9 @@ def delete(list):
 
 
 class TestListMethods(unittest.TestCase):
+    def test_liubov_peleshenko_fi_94(self):
+        list = [1, 2, 3, 4, 5, 6]
+        self.assertEqual(swap_first_last_elements(list), [6, 2, 3, 4, 5, 1])
 
     def test_roman_tkalenko_fi_13(self):
         self.assertEqual(len([]), 0)
@@ -36,6 +44,10 @@ class TestListMethods(unittest.TestCase):
 
     def test_illia_kripaka_fi_94_2(self):
         self.assertEqual(2 * [1, 3, 5], [1, 3, 5, 1, 3, 5])
+
+    def test_maria_martynova_fi_93(self):
+        self.assertEqual(len([0]), 1)
+        self.assertEqual(len([1, 1]), 2)
 
     def test_kostiantyn_baievskyi_fi_93(self):
         self.assertEqual([1, 2, 3] + [4, 5, 6], [1, 2, 3, 4, 5, 6])
