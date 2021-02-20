@@ -5,9 +5,10 @@ def rem_last_element(list):
     list.remove(list[-1])
     return list
 
+
 def delete(list):
-    list=[3, 5, 2, 9, 8]
-    removed=list.pop()
+    list = [3, 5, 2, 9, 8]
+    removed = list.pop()
     return list
 
 
@@ -35,7 +36,7 @@ class TestListMethods(unittest.TestCase):
         self.assertEqual([1, 2, 3] + [4, 5, 6], [1, 2, 3, 4, 5, 6])
 
     def test_alina_misnik_fi_94(self):
-        list=[3, 5, 2, 9, 8]
+        list = [3, 5, 2, 9, 8]
         self.assertEqual(delete(list), [3, 5, 2, 9])
 
 
